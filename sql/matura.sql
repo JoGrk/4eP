@@ -42,4 +42,8 @@ ADD FOREIGN KEY (IdPrzedmiotu)
     REFERENCES Przedmioty(IdPrzedmiotu);
 
 INSERT INTO Klasy VALUES(NULL, 'LOGISTYK');
-INSERT INTO Przedmioty VALUES(NULL, 'Matematyka' , 'Biologia');
+INSERT INTO Przedmioty VALUES(NULL, 'Matematyka');
+INSERT INTO Przedmioty VALUES(NULL, 'Biologia');
+INSERT INTO Uczniowie VALUES(NULL, 'Piotr', 'Nowak', 1);
+INSERT INTO Matura VALUES(2, 1);
+INSERT INTO Matura VALUES(2, 2);

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            gap:40px;
+        }
+        nav{
+            border-right: 1px solid black;
+            height: 100vh;
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <label for=""> <input type="radio" name="obrazek" id="zamek" checked>Zamek</label> <br>
+        <label for=""><input type="radio" id="niebo" name="obrazek">Niebo <br></label>
+        <label for=""><input type="radio" id="lawka" name="obrazek" >Ławka</label> <br>
+        <button onclick = "sendImg()" id="button1">WYŚLIJ</button>
+        
+    </nav>
+    <main><img src="zamek.jpg" alt="" id="img"></main>
+    <script src="grupa_opcji.js" defer></script>
+</body>
+</html>
