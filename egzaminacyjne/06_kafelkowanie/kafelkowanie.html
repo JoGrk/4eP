@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kafelkowanie łazienki</title>
+</head>
+<body>
+    Powierzchnia w m<sup>2</sup> <input type="number"  id="area"><br>
+    <label for="square">
+        <input type="radio" name="area" id="square" checked>
+        Płytki 20 x 20 cm
+    </label>
+    <br>
+    <label for="rectangle">
+        <input type="radio" name="area" id="rectangle">
+        Płytki 25 x 12 cm
+    </label>
+    <br>
+    <input type="button" onclick="calculatePrice()" value="wyślij">
+    <p id="result"></p>
+
+    <script src="./kafelkowanie.js"></script>
+</body>
+</html>
