@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Format</title>
+    <link rel="stylesheet" href="format.css">
+</head>
+<body>
+    <p>Podaj rozmiar tekstu w procentach:
+    <br><br>
+    <input type="number" id="textSize"> %</p>
+    <br><br>
+    <select id="textchange">
+        <option value="normal">prosty</option>
+        <option value="italic">pochylony</option>
+    </select>
+    <p>Jakim kolorem sformatować tekst? Wybierz przycisk</p>
+    <button onclick="textFormat('red')" class="square color-red"></button>
+    <button onclick="textFormat('green')" class="square color-green"></button>
+    <button onclick="textFormat('blue')" class="square color-blue"></button>
+    <p id="result">To jest przykład paragrafu, który może być dowolnie formatowany przez Java Script</p>
+
+    <script src="format.js"></script>
+</body>
+</html>
