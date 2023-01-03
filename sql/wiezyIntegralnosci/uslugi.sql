@@ -33,8 +33,8 @@ CREATE TABLE Uslugi
 -- 3. Do tabeli Usługi dodaj więzy integralności: 
 
 -- A. do pola nazwa: wartości w polu nie mogą się powtarzać, pole nie może być puste
--- B. do pola cena: wpisywane wartości muszą być większe od 
-10
+-- B. do pola cena: wpisywane wartości muszą być większe od 10
+
 ALTER TABLE Uslugi
 MODIFY nazwa varchar(50) NOT NULL UNIQUE,
 ADD CONSTRAINT ch_cena CHECK(cena>10);
@@ -63,9 +63,12 @@ CREATE TABLE UslugiKlientow(
 
 -- A. w tabeli Klienci
 -- B. w tabeli Uslugi
+
 -- 7. Zamów i wyprowadź do bazy danych wykonanie usług: 
 -- A. pierwszy klient zamawia pierwszą usługę, przy wprowadzaniu danych posługuj się nazwami usług
 -- B. Drugi klient zamawia obie usługi, przy wprowadzaniu danych posługuj się nazwami usług
+
+
 -- 8. Upewnij się, że działają więzy integralności referencyjnej
 
 -- A. usuń dane pierwszego klienta z tabeli klienci,

@@ -11,4 +11,7 @@ function sendForm(){
         result.innerHTML="Musisz zapoznać się z regulaminem"
         result.style.color='red'
     }
-}
+
+    
+
+    
