@@ -56,21 +56,70 @@ CREATE TABLE UslugiKlientow(
 );
 
 -- 5. Wprowadź dane dwóch klientów i dwie usługi
+    INSERT INTO Klienci
+    (imie,nazwisko,email)
+    VALUES
+    ('Kajtek','Kowalski','kajtekkowalski@gmail.com'),
+    ('Jan', 'Nowak', 'jannowak@gmail.com');
+
+    INSERT INTO Uslugi
+    (nazwa,cena)
+    VALUES 
+    ('sprzatanie',60), ('mycie', 70);
+
+
 
 
 
 -- 6. Upewnij się, że działają więzy integralności (nie puste, wartości się nie powtarzają, check)
 
 -- A. w tabeli Klienci
+INSERT INTO Klienci
+    (imie,nazwisko,email)
+    VALUES
+    ('Sebix','Kowalski','kajtekkowalski@gmail.com')
 -- B. w tabeli Uslugi
+INSERT INTO Uslugi
+    (nazwa,cena)
+    VALUES 
+    ('naprawa',7);
+
+INSERT INTO Uslugi
+    (cena)
+    VALUES 
+    (75);
 
 -- 7. Zamów i wyprowadź do bazy danych wykonanie usług: 
 -- A. pierwszy klient zamawia pierwszą usługę, przy wprowadzaniu danych posługuj się nazwami usług
+
+INSERT INTO UslugiKlientow
+(ID, idklienta)
+VALUES
+(1,1);
+
 -- B. Drugi klient zamawia obie usługi, przy wprowadzaniu danych posługuj się nazwami usług
+INSERT INTO UslugiKlientow
+(ID, idklienta)
+VALUES
+(1,2),
+(2,2);
 
 
 -- 8. Upewnij się, że działają więzy integralności referencyjnej
 
 -- A. usuń dane pierwszego klienta z tabeli klienci,
+DELETE FROM Klienci
+WHERE idklienta=1;
+
 --  B. z tabeli klienci usuń dane pierwszego klienta stosując podejście wywżone
+
+--  nie wyjdzie, bo pole wchodzi w skład klucza podstawowego
+
 -- C. z tabeli klienci usuń dane drugiego klienta stosując podejście kaskadowe usuwanie powiązanych pól
+
+DELETE FROM UslugiKlientow
+WHERE idklienta=2;
+
+DELETE FROM Klienci
+WHERE idklienta=2;
+

@@ -1,0 +1,42 @@
+body{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 80px 500px 50px;
+    grid-template-areas: 
+    "hd hd "
+    "left right "
+    "footer footer";
+}
+header{
+    background-color: #829eb9;
+    text-align: center;
+    font-family: Arial;
+    padding-top: 10px;
+    grid-area: hd;
+}
+#left{
+    background-color:#B3C6D9 ;
+    padding-top: 100px ;
+    text-align: center;
+    font-size: 20px;
+    grid-area: left;
+
+}
+#right{
+    background-color: #E0E9F1;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 100px;
+    grid-area: right;
+}
+
+footer{
+    background-color: yellow;
+    text-align: center;
+    font-family: Arial;
+    grid-area: footer;
+}
+img{
+    margin: 30px;
+    padding: 10px;
+}
